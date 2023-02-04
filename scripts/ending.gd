@@ -12,3 +12,10 @@ func _ready():
 
 func _on_GoToTtleButton_pressed():
     get_tree().change_scene("res://scenes/title.tscn")
+
+func set_record_value(score, time, enemy_data):
+    $RecordDialog/ScoreLabel.text = str(score)
+    $RecordDialog/Time.text = str(time)
+    $RecordDialog/EnemyNum.text = str(enemy_data.num)
+    $RecordDialog/EnemySpeed.text = str(enemy_data.speed)
+    $RecordDialog/EnemyToughness.text = str(enemy_data.toughness)
