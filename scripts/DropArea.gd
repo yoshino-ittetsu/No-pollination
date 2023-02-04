@@ -12,3 +12,4 @@ func _input(event):
 		var tower = tower_scene.instance()
 		tower.position = event.position
 		add_child(tower)
+
