@@ -34,3 +34,8 @@ polygon = PoolVector2Array( 1912, 174, 1924, 1078, 717, 1078, 758, 922, 811, 809
 
 [node name="RigidBody2D" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1444, 250 )
+
+[node name="SpermaBorn" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="SpermaBorn" to="." method="_on_SpermaBorn_timeout"]
