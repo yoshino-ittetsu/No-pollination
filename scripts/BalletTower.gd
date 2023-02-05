@@ -12,14 +12,13 @@ func _ready():
 
 
 func _process(delta):
-    print_debug($Timer.time_left * 10)
-    if int($Timer.wait_time - $Timer.time_left) == 0 or 100 % int($Timer.wait_time - $Timer.time_left) == 0:
+    if int(($Timer.wait_time - $Timer.time_left) * 10 )  % 5 == 0   :
         fire_bullets()
 
 func fire_bullets():
     var ballet = load("res://scenes/Tower-s_Ballet.tscn").instance()
     call_deferred("add_child", ballet)
-    call_deferred("move_child", ballet, 1)
+    call_deferred("move_child", ballet, int($Timer.time_left * 10))
     ballet.mode = 2
 
 
