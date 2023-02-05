@@ -16,6 +16,6 @@ func _input(event):
 
 func _on_SpermaBorn_timeout():
 	var sperma = sperma_scene.instance()
-	sperma.position = Vector2(screen_size.x, 190)
+	sperma.position = Vector2(screen_size.x - 130, 136)
 	add_child(sperma)
 	print_debug($SpermaBorn.is_stopped())
