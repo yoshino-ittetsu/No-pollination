@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Node
 
 
 # Declare member variables here. Examples:
@@ -10,7 +10,10 @@ extends CanvasLayer
 func _ready():
     pass # Replace with function body.
 
-func _on_StartButton_pressed():
-    $"/root/Global".ENEMY_SPEED = 600
-    $"/root/Global".SCORE = 0
-    get_tree().change_scene("res://scenes/main.tscn")
+
+var SCORE = 0;
+var TIME_STR = "";
+var ENEMY_SPEED = 600;
+var ENEMY_TOUGHNESS = rand_range(5, 1000);
+var ENEMY_NUM = 0;
+var TIME_VALUE = 0.0;

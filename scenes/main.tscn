@@ -33,9 +33,10 @@ polygon = PoolVector2Array( -2, 827, 270, 704, 461, 620, 643, 552, 860, 476, 101
 polygon = PoolVector2Array( 1912, 174, 1924, 1078, 717, 1078, 758, 922, 811, 809, 924, 632, 1106, 461, 1267, 355, 1466, 269, 1743, 191 )
 
 [node name="RigidBody2D" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1444, 250 )
+position = Vector2( 1784, 142 )
 
 [node name="SpermaBorn" type="Timer" parent="."]
 autostart = true
 
+[connection signal="add_score" from="RigidBody2D" to="mainHUD" method="_on_RigidBody2D_add_score"]
 [connection signal="timeout" from="SpermaBorn" to="." method="_on_SpermaBorn_timeout"]

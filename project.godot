@@ -14,6 +14,11 @@ config/name="No-pollination"
 run/main_scene="res://scenes/title.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GameScore="res://scripts/game_score.gd"
+Global="*res://scenes/Global.tscn"
+
 [display]
 
 window/size/width=1920
